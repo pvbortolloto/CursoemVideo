@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js" ></script>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: #ffffff;
+            width: 1024px;
+            height: 768px;
+        }
+        div#interface{
+            margin-top: -58px;
+        }
+        section{
+            max-width: 1024px;
+            min-height: 960px;
+
+            background-size: cover;
+            margin: 0 auto;
+        }
+        ul, ul li{
+            margin:0;
+            padding: 0;
+            list-style-type: none;
+        }
+        ul {
+            padding-top: 40px;
+        }
+        ul li{
+            background: #fff;
+            margin: 0 11px 1px 11px;
+            padding: 15px;
+        }
+        section#listaMenu {
+            width: 250px;
+            display: block;
+            float: left;
+            margin-right: 0px;
+            margin-top: 20px;
+            background-color: black;
+        }
+        section#listaMenu li{
+            background-color: powderblue;
+            font-family: Arial, sans-serif;
+            font-size: 15pt;
+            text-decoration: none;
+        }
+        section#listaMenu li:hover{
+            background-color: gray;
+            color: white;
+            text-decoration: underline;
+            -webkit-transition: background-color 1s;
+            -moz-transition: background-color 1s;
+            -o-transition: background-color 1s;
+            -ms-transition: background-color 1s;
+            transition: backgroud-color 1s;
+        }
+        section#conteudo-pagina {
+            background-color: #f0f0f0;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 15px;
+            width: 600px;
+            display: block;
+            float: left;
+        }
+        section#conteudo-pagina h3{
+            padding: 10px;
+            background-color: #c0c0c0;
+            font-family: Arial sans-serif;
+            font-size: 15pt;
+        }
+        section#conteudo-pagina p{
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 12pt;
+            margin: 0px;
+        }
+        header#nome-empresa{
+            border-bottom: 1px #606060 solid;
+        }
+        header#nome-empresa h1{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 25pt;
+            text-decoration: none;
+        }
+        header#nome-empresa h2{
+            margin-top: -20px;
+            font-size: 12pt;
+            text-align: center;
+            text-decoration: none;
+        }
+        header#nome-empresa a{
+            text-decoration: none;
+            color: black;
+            font-family: Arial;
+            font-size: 20pt;
+        }
+        header#nome-empresa a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+        footer#rodape {
+            clear: both;
+            border-top: 1px solid #606060;
+        }
+        footer#rodape p{
+            text-align: center;
+            color: #000000;
+            text-decoration: none;
+        }
+        footer#rodape a{
+            text-decoration: none;
+            color: blue;
+            font-size: 10pt;
+        }
+        footer#rodape a.link-rodape-esquerda:hover{
+            text-decoration: underline;
+            font-size: 12pt;
+            color: black;
+        }
+        footer#rodape a.link-rodape-direita:hover{
+            text-decoration: underline;
+            font-size: 12pt;
+            color: black
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $("ul li").each(function(i){
+                $(this).css({y:"-30px", opacity:0}).transition({y:"0", opacity:1, delay:200 * i},600,"ease");
+            })
+        })
+
+        $(function(){
+            $("ul li").css({opacity:0}).each(function(i){
+                $(this).css({y:"150px", rotateX: "90deg", transformOrigin: 'center top'}).transition({perspective: '400px',y:"0", opacity:1, rotateX:"0deg", delay:200 * i},300, "ease");
+            })
+
+        })
+    </script>
+
+
+</head>
+<body>
+<div id="interface">
+<section id="listaMenu">
+    <ul>
+        <li>Home</li>
+        <li>Produtos</li>
+        <li>Contato</li>
+        <li>Quem somos</li>
+        <li>Cadastro</li>
+        <li>Administração</li>
+    </ul>
+</section>
+<section id="conteudo-pagina">
+    <header id="nome-empresa">
+        <h1><a href="http://www.vegasoft.com.br">Vegasoft</a></h1>
+        <h2>Tecnologia da informação LTDA.</h2>
+    </header>
+    <h3>O que é a Vegasoft?</h3>
+    <p>
+        A Vegasoft é uma empresa que atua a area de desenvolvimento de software e consultoria para empresas, atuando na criação de soluções para automação comercial.
+    </p>
+    <h3>Qual a forma de trabalho da Vegasoft?</h3>
+    <p>
+        A Vegasoft utiliza como ferramenta a linguagem C# que hoje é uma das tecnologias mais utilizadas e mais atualizada do mercado, com o uso do Microsoft Visual Studio para auxiliar na criação do software
+    </p>
+    <footer id="rodape">
+        <p>Copyright 2013 - by Vegasoft Developers<br/>
+            <a class="link-rodape-esquerda" href="http://facebook.com/vegasoft" target="_blank">  Curta nossa pagina no Facebook </a>| <a class="link-rodape-direita" href="http://twitter.com/vegasoft" target="_blank">Siga-nos no Twitter</a></p>
+    </footer>
+</section>
+
+
+</div>
+</body>
+</html>
